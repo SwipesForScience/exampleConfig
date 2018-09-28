@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js:
+- '6.0'
+cache:
+  directories:
+  - SwipesForScience/node_modules
+branches:
+  only:
+  - master
+notifications:
+  email: false
+before_script:
+- bash ./prepare.sh
+script:
+- npm run --silent build
+after_success:
+- bash ./deploy.sh
+env:
+  global:
+  - GH_USER: SwipesForScience
+  - GH_REPO: testConfig

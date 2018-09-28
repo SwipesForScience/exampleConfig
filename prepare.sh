@@ -5,9 +5,10 @@
 # then travis will build, then will deploy it on gh-pages
 echo 'running git clone'
 ls
-git clone https://github.com/SwipesForScience/SwipesForScience
+git clone https://github.com/SwipesForScience/SwipesForScience /tmp/SwipesForScience
 echo 'copying config to SwipesForScience'
-cp ./config.js SwipesForScience/src/config.js
+cp ./config.js /tmp/SwipesForScience/src/config.js
+cp -r /tmp/SwipesForScience ./SwipesForScience
 cd SwipesForScience
 echo 'running npm install'
 npm install

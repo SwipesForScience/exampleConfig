@@ -15,7 +15,7 @@ before_script:
 script:
 - cd SwipesForScience; npm run build
 after_success:
-- bash ./deploy.sh
+- cd ..; bash ./deploy.sh
 env:
   global:
   - GH_USER: SwipesForScience

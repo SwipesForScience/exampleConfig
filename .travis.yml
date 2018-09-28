@@ -13,7 +13,7 @@ notifications:
 before_script:
 - bash ./prepare.sh
 script:
-- npm run --silent build
+- npm run build
 after_success:
 - bash ./deploy.sh
 env:

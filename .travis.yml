@@ -4,7 +4,7 @@ node_js:
 - '6.0'
 cache:
   directories:
-  - SwipesForScience/node_modules
+
 branches:
   only:
   - master

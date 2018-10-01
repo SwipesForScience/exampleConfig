@@ -3,8 +3,7 @@ language: node_js
 node_js:
 - '6.0'
 cache:
-  directories:
-
+  directories: 
 branches:
   only:
   - master
@@ -18,6 +17,6 @@ after_success:
 - cd ..; bash ./deploy.sh
 env:
   global:
-  - GH_USER: akeshavan
-  - GH_REPO: brainSpot
-  - secure: dDJCeJqpkFm/RQUoUr7VcKbVkhKlQA2effAWhlpiUQpa0Ybd14F8ZOWQknES9EOe4/PS+O1aUuvCVV8aJ4LF2eZx2P8ik5Ad3caetxfvZ+11HDOVADw5bwwMUzKYYj7rMrNt6e6KRQjr0/bXiu0ZEEM4TqZG5FQwh+bkkg5gN7zHr/el8D0ebIw1kriHAc6hQ2Exy7TDmIbVO994Q+H5dcWRp9C0M7cYHmY4QJBA6SdvlUlHogO5JVb2Mjd034Bpj/udlFlsF/579WlfK5Z1VhVDjIclHzZgQGFrOmLrMNcB7f1iTnmly6ynGb0m1WKfmwWqkqurGgyKllcXGjAprj3GiNJmzk0nIJe7sG25XsHUvUd8xZRT6uBarjvqNPqViQiKOKMeLqc6JoKGFMR+A6vtD5f60wiOedYk5dIB/VSc7Pb/Wcl8sGFMDbLGEEm1SWjLoLmv+MWC4FXIOHtLgSh6UA/o4dsGWmmxoz+BWpbOoMnvGRLTtijP28iqea55oAYDJI+OHHima+mSfYuGosPA8rI53XR/wg7wZ5zbUiZsWyJfmyd8jBYdqzuWYVkWYdJ21ATAhKYeuUcHxAtTCU8TTK+23St1SQDEXYbuVzqiN56NxkavEY52UVNX1ubdAAIhH5VP4wMsWNjRocK4o+4uE+8oRV/AnCAWtUVy5PU=
+  - GH_USER: SwipesForScience
+  - GH_REPO: testConfig
+  - secure: LxTkIdOAvBRO4/hmsw5hMEARDlwWIHXrQpfz3fYeKQO41b0ixL4pWlKZR5tE47xPrdC9DWDah9+ippxnBN0DGSFNKGg9upH4+fq9+QrsQWeUwKO9F4zEbzzX65GXcmAG3yuGes9CfSSK8uy1vZ6F7uahYuKgjEu60/eR0YRMiKqYJYVC12lfwa2L68mb40J5D25x7tnRLPYZjLaM96OaDuFlqh931iIClaQ86S37iU1C0dOSbzSL8sQWTyGlU3AHG1PfZlq7s1xfgFzXb3f/N3eSlERr8MDxVN7byfWfM7Fkd9Exba1/3sik4a4EriFmtGv+LjmT2/1LiqLHq6Fq9OxLxsZZ1QDTbHs5PvXpuRbgGzIDz65DuM0rpYocW6I0FEjr5azWpvPfgPfaBPbEoCJ9GAU3WE6ehD7JLl8LKyqvNL/12WXxGtv1fDu9kuYa90M7f0Dsgrt3KqJU0Kp3JCSw4m+HiQ4e52zbS+oo1NVx0OKZRVG/SZ1cFv7w+M6zMSP6QGcZDksi2MypEszhOLd6r36GrjVYi92wJf8hBy8EeyyP67LTyiim5dHR6J5jogyp32P2ypK3CGzJWyKlAi9tMka+w8gg/+uEXeRtDpVNiC7bXiVbYjPMMlrb5Sxm6P2v3EN9bwPXTMGi6qiPvOM20rf+vjUUGAMoaQzqsBQ=

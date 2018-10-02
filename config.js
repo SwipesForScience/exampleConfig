@@ -50,23 +50,23 @@ export default {
     title: 'whaledr',
     tagline: 'Help oceanographers find whales',
     // background image on Homepage
-    backgroundUrl: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/SwipesForScience.svg',
+    backgroundUrl: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/SwipesForScience.svg',
   },
 
   // Play configuration
   play: {
-    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/undraw_blank_canvas.svg',
+    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/undraw_blank_canvas.svg',
 
   },
 
   // Chats configuration
   chats: {
-    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/undraw_no_data.svg',
+    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/undraw_no_data.svg',
   },
 
   // Profile configuration
   profile: {
-    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/undraw_chatting.svg',
+    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/undraw_chatting.svg',
   },
 
   // your app's tutorial page

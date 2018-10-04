@@ -7,3 +7,7 @@ We want citizen scientists to help us classify ocean sounds that have whales üê
 
 You may notice  that this repo does not contain the main [Swipes for Science codebase](https://github.com/SwipesForScience/SwipesForScience) -- instead, this repo only contains the content needed to customize the S4S app. This prevents your repo from getting too big with files you don't really need to see, and you're also not bogged down with code from older versions of the S4S template. We have a little trick to make sure 
 that your app is always up to date with the latest S4S template, by using [Travis-CI](https://travis-ci.com) to update and deploy your app. 
+
+Here is a diagram to follow as you set up your own app:
+
+![Configuration diagram](./images/SwipesForScienceDiagram.svg)

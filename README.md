@@ -1,5 +1,7 @@
 # Example Swipes for Science configuration
 
+[![Build Status](https://travis-ci.org/SwipesForScience/testConfig.svg?branch=master)](https://travis-ci.org/SwipesForScience/testConfig)
+
 Hello 👋! Thanks for checking out this example Swipes for Science app. This example repo has all you need to configure your own Swipes for Science (S4S) app. 
 
 Specifically, this example shows how to a create an app that annotates images and sounds.

@@ -54,7 +54,7 @@ export default {
     title: 'whaledr',
     tagline: 'Help oceanographers find whales',
     // background image on Homepage
-    backgroundUrl: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/SwipesForScience.svg',
+    backgroundUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg',
   },
 
   // Play configuration

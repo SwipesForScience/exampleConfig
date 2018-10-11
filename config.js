@@ -20,7 +20,7 @@ export default {
   //   delimiter: '__',
   // },
 
-  widgetType: 'ImageSwipe',
+  widgetType: 'ImageSoundSwipe',
   widgetProperties: {
     baseUrlTemplate: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/{0}.jpg',
     soundUrlTemplate: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/{0}.wav',

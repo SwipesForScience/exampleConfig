@@ -2,7 +2,7 @@ export default {
 
   // if set to true, the user will be routed to /tutorial instead of /play if
   // they haven't taken a tutorial
-  needsTutorial: true,
+  needsTutorial: false,
 
   // each time the app is run, it will check this manifest and update the firebase database
   // if new entries are there, they will be added, and entries that aren't in the manifest
@@ -20,13 +20,12 @@ export default {
   //   delimiter: '__',
   // },
 
-  widgetType: 'ImageSoundSwipe',
+  widgetType: 'ImageSwipe',
   widgetProperties: {
-    baseUrlTemplate: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/{0}.jpg',
-    soundUrlTemplate: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/{0}.wav',
-    delimiter: '%',
+    baseUrlTemplate: 'https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/base_{1}.png',
+    delimiter: '__',
     leftSwipeLabel: 'Fail',
-    rightSwipeLabel: 'Whale',
+    rightSwipeLabel: 'Pass',
   },
 
 
@@ -35,26 +34,26 @@ export default {
 
   // this comes from your firebase console
   firebaseKeys: {
-    apiKey: 'AIzaSyBTvqFK1fjj3G708OSU4NTRDgnRT2hMnLM',
-    authDomain: 'swipesforsciencedev.firebaseapp.com',
-    databaseURL: 'https://swipesforsciencedev.firebaseio.com',
-    projectId: 'swipesforsciencedev',
-    storageBucket: '',
-    messagingSenderId: '390175687447',
+    apiKey: 'AIzaSyBLr1HyCf7tXGwnppkfjlIb6I0XSkJgybY',
+    authDomain: 'swipesforsciencedev1.firebaseapp.com',
+    databaseURL: 'https://swipesforsciencedev1.firebaseio.com',
+    projectId: 'swipesforsciencedev1',
+    storageBucket: 'swipesforsciencedev1.appspot.com',
+    messagingSenderId: '380364880642'
   },
 
   app: {
-    navbarVariant: 'info',
+    navbarVariant: 'secondary',
   },
 
   // Homepage configuration
 
   // your app's title and tagline
   home: {
-    title: 'whaledr',
-    tagline: 'Help oceanographers find whales',
+    title: 'Swipes for Science',
+    tagline: 'A template for a citizen science game',
     // background image on Homepage
-    backgroundUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg',
+    backgroundUrl: 'https://raw.githubusercontent.com/SwipesForScience/testConfig/master/images/SwipesForScience.svg?sanitize=true',
   },
 
   // Play configuration

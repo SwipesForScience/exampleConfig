@@ -1,25 +1,13 @@
 export default {
 
-  // if set to true, the user will be routed to /tutorial instead of /play if
-  // they haven't taken a tutorial
+    // if set to true, the user will be routed to /tutorial instead of /play if
+    // they haven't taken a tutorial
   needsTutorial: false,
-
-  // each time the app is run, it will check this manifest and update the firebase database
-  // if new entries are there, they will be added, and entries that aren't in the manifest
-  // but are in the firebase database will be *removed*
-  manifestUrl: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/whaledrManifest.json',
-  // 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/bsHbnManifest.json',
-  // 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/textWidgetManifest.json',
-
-  // set the type of widget and its properties here.
-  // widgetType: 'ImageSplat',
-  // widgetProperties: {
-  //   baseUrlTemplate: 'https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/base_{1}.png',
-  //   maskUrlTemplate: 'https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/mask_{1}.png',
-  //   contourUrlTemplate: 'https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/contour_{1}.png',
-  //   delimiter: '__',
-  // },
-
+    // each time the app is run, it will check this manifest and update the firebase database
+    // if new entries are there, they will be added, and entries that aren't in the manifest
+    // but are in the firebase database will be *removed*
+  manifestUrl: 'https://raw.githubusercontent.com/SwipesForScience/exampleConfig/master/bsHbnManifest.json',
+  manifestType: 'json',
   widgetType: 'ImageSwipe',
   widgetProperties: {
     baseUrlTemplate: 'https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/base_{1}.png',
@@ -28,24 +16,179 @@ export default {
     rightSwipeLabel: 'Pass',
   },
 
+    // if manifestType = 'pubmed' then you should also include a manifestQuery key.
+    // if manifestType = 'json' then you're fine
+    // if manifestType = 'github' then you need to provide a github user, repo,
+    // and path under manifestGitHub
 
-  // this shows a 'beta' ribbon in the bottom right corner
-  betaMode: false,
+  // manifestType: 'github',
+  // manifestQuery: '(neuroimaging OR "Magnetic Resonance Imaging" OR "MRI") AND brain AND autism',
+  // manifestGitHub: { user: 'akeshavan',
+  //   repo: 'mHealthLandscape',
+  //   path: 'ios',
+  // },
 
-  // this comes from your firebase console
-  firebaseKeys: {
-    apiKey: 'AIzaSyBLr1HyCf7tXGwnppkfjlIb6I0XSkJgybY',
-    authDomain: 'swipesforsciencedev1.firebaseapp.com',
-    databaseURL: 'https://swipesforsciencedev1.firebaseio.com',
-    projectId: 'swipesforsciencedev1',
-    storageBucket: 'swipesforsciencedev1.appspot.com',
-    messagingSenderId: '380364880642'
-  },
+  // manifestType: 'S3',
+  // manifestS3: {
+  //   bucket: 'himatdata',
+  //   prefix: 'BeringStrait',
+  //   delimiter: '.wav',
+  //   max_keys: 10000,
+  // },
 
-  app: {
-    navbarVariant: 'secondary',
-  },
-  
+  // widgetType: 'ImageSwipe', //'BranchingTemplateWidget',
+  /* eslint-disable */
+  // widgetProperties: {
+    // titleKey: 'trackName',
+    // textKey: 'description',
+    // baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    // delimiter: '%',
+    // autoComplete: [
+    //   'active data entry',
+    //   'passive data entry',
+    //   'gamified',
+    //   'social media',
+    //   'educational',
+    //   'sensors',
+    // ],
+    // stages: [
+    //   {
+    //     id: 'relevant',
+    //     showCriteria: {},
+    //     question: 'Is this app about mental health?',
+    //     responseProperties: {
+    //       widgetType: 'TextBinarySwipe',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         leftSwipeLabel: 'No',
+    //         rightSwipeLabel: 'Yes',
+    //       },
+    //     },
+    //   },
+    //   {
+    //     id: 'datacollection',
+    //     showCriteria: {
+    //       node: 'relevant',
+    //       statement: '==',
+    //       value: 1,
+    //     },
+    //     question: 'Does this app collect user data?',
+    //     responseProperties: {
+    //       widgetType: 'TextBinarySwipe',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         leftSwipeLabel: 'No',
+    //         rightSwipeLabel: 'Yes',
+    //       },
+    //     },
+    //   },
+    //   {
+    //     id: 'sensors',
+    //     showCriteria: {
+    //       node: 'datacollection',
+    //       statement: '==',
+    //       value: 1,
+    //     },
+    //     question: 'Interoperable with sensors/wearables?',
+    //     responseProperties: {
+    //       widgetType: 'TextBinarySwipe',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         leftSwipeLabel: 'No',
+    //         rightSwipeLabel: 'Yes, sensors',
+    //       },
+    //     },
+    //   },
+    //   {
+    //     id: 'social',
+    //     showCriteria: {
+    //       node: 'datacollection',
+    //       statement: '==',
+    //       value: 1,
+    //     },
+    //     question: 'Is there a social component?',
+    //     responseProperties: {
+    //       widgetType: 'TextBinarySwipe',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         leftSwipeLabel: 'Not social',
+    //         rightSwipeLabel: 'Yes, social',
+    //       },
+    //     },
+    //   },
+    //   {
+    //     id: 'game',
+    //     showCriteria: {
+    //       node: 'datacollection',
+    //       statement: '==',
+    //       value: 1,
+    //     },
+    //     question: 'Are there game elements?',
+    //     responseProperties: {
+    //       widgetType: 'TextBinarySwipe',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         leftSwipeLabel: 'No',
+    //         rightSwipeLabel: 'Yes',
+    //       },
+    //     },
+    //   },
+    //   {
+    //     id: 'disorder',
+    //     showCriteria: {
+    //       node: 'datacollection',
+    //       statement: '==',
+    //       value: 1,
+    //     },
+    //     question: 'What disorders does it target?',
+    //     responseProperties: {
+    //       widgetType: 'TextTagger',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         autoComplete: ['depression', 'anxiety', 'sleep'],
+    //       },
+    //     },
+    //   },
+    //   {
+    //     id: 'treatment',
+    //     showCriteria: {
+    //       node: 'datacollection',
+    //       statement: '==',
+    //       value: 1,
+    //     },
+    //     question: 'What is the treatment strategy?',
+    //     responseProperties: {
+    //       widgetType: 'TextTagger',
+    //       widgetProperties: {
+    //         titleKey: 'trackName',
+    //         textKey: 'description',
+    //         delimiter: '%',
+    //         baseUrlTemplate: 'https://raw.githubusercontent.com/akeshavan/mHealthLandscape/master/ios/{0}.json',
+    //         autoComplete: ['CBT', 'journal'],
+    //       },
+    //     },
+    //   },
+    // ],
+  // },
+  /* eslint-enable */
   iconAttribute: {
     name: 'openmoji',
     url: 'http://openmoji.org',
@@ -110,90 +253,87 @@ export default {
     },
   },
 
-  // Homepage configuration
 
-  // your app's title and tagline
+    // this shows a 'beta' ribbon in the bottom right corner
+  betaMode: false,
+
+    // this comes from your firebase console
+  firebaseKeys: {
+    apiKey: 'AIzaSyBLr1HyCf7tXGwnppkfjlIb6I0XSkJgybY',
+    authDomain: 'swipesforsciencedev1.firebaseapp.com',
+    databaseURL: 'https://swipesforsciencedev1.firebaseio.com',
+    projectId: 'swipesforsciencedev1',
+    storageBucket: 'swipesforsciencedev1.appspot.com',
+    messagingSenderId: '380364880642',
+  },
+
+  app: {
+    navbarVariant: 'info',
+  },
+
+    // Homepage configuration
+    // your app's title and tagline
   home: {
     title: 'Swipes for Science',
-    tagline: 'A template for a citizen science game',
-    // background image on Homepage
+    tagline: 'A citizen science game template',
+      // background image on Homepage
     backgroundUrl: 'https://raw.githubusercontent.com/SwipesForScience/testConfig/master/images/SwipesForScience.svg?sanitize=true',
   },
 
-  // Play configuration
+    // Play configuration
   play: {
-    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/undraw_blank_canvas.svg',
+    blankImage: 'https://raw.githubusercontent.com/SwipesForScience/testConfig/master/images/undraw_blank_canvas.svg?sanitize=true',
 
   },
 
-  // Chats configuration
+    // Chats configuration
   chats: {
-    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/undraw_no_data.svg',
+    blankImage: 'https://raw.githubusercontent.com/SwipesForScience/testConfig/master/images/undraw_no_data.svg?sanitize=true',
   },
 
-  // Profile configuration
+    // Profile configuration
   profile: {
-    blankImage: 'https://cdn.rawgit.com/SwipesForScience/testConfig/master/images/undraw_chatting.svg',
+    blankImage: 'https://raw.githubusercontent.com/SwipesForScience/testConfig/master/images/undraw_chatting.svg?sanitize=true',
   },
 
-  // your app's tutorial page
-  // describe your problem and the way you want people to annotate
+    // your app's tutorial page
+    // describe your problem and the way you want people to annotate
   tutorial: {
-    // there is only 1 available custom animiation right now, and its 'Bubbles'
+      // there is only 1 available custom animiation right now, and its 'Bubbles'
     customBackgroundAnimation: 'Bubbles',
-    // steps have 2 parts, the intro and examples. In the intro you provide
-    // text and images. In the examples, you provide text, data pointers, and tutorial steps
-    // that the widget will display
+      // steps have 2 parts, the intro and examples. In the intro you provide
+      // text and images. In the examples, you provide text, data pointers, and tutorial steps
+      // that the widget will display
     steps: {
       intro: [
         {
-          // keep the text really short
-          text: 'we want to learn about whales',
+            // keep the text really short
+          text: 'here is an example tutorial step',
           image: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg',
         },
         {
-          // use \n to linebreak the text
-          text: 'there is a sound recorder in the ocean, \n its called a hydrophone \n and its always on',
+            // use \n to linebreak the text
+          text: 'here is another one.',
           image: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Hydrophone_being_lowered_into_the_Atlantic.jpg',
-        },
-        {
-          text: 'we can make a picture from the sound waves \n the vertical lines are from the hydrophone \n using ecolocation to hear ocean sounds',
-          image: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/OO_HYVM1__YDH_2017_10_06T05_16_45.jpg',
-        },
-        {
-          text: 'most of the time you do not hear anything.',
-          image: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/OO_HYVM1__YDH_2017_10_06T21_55_05.jpg',
-        },
-        {
-          text: 'but sometimes you hear a whale',
-          image: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/OO_HYVM1__YDH_2017_10_06T19_04_25.jpg',
-        },
-        {
-          text: 'or dolphins',
-          image: 'http://himatdata.s3.amazonaws.com/whaledr_renamed/OO_HYVM1__YDH_2017_10_06T01_50_25.jpg',
-        },
-        {
-          text: 'we want to train a machine to recognize the whales and dolphins. \n For that we need your help.',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Gnome-computer.svg/600px-Gnome-computer.svg.png',
         },
       ],
       examples: [
         {
-          // fill these with examples with respect to the widget you're using
-          text: 'swipe right when you hear/see a whale \n you can tap the image to hear it.',
-          pointer: 'OO_HYVM1__YDH_2017_10_06T06_48_00',
+            // fill these with examples with respect to the widget you're using
+          text: 'swipe right when the image is good quality',
+          pointer: 'sub-NDARYX806FL1__cor_184',
           answer: 1,
           tutorialStep: 0,
         },
         {
-          text: 'when it is not a whale \n swipe left',
-          pointer: 'OO_HYVM1__YDH_2017_10_06T06_48_00',
+          text: 'swipe left when its bad',
+          pointer: 'sub-NDAREG590BNY__sag_201',
           answer: 0,
           tutorialStep: 1,
         },
         {
           text: `if you're not sure, click 'help' \n to discuss with scientists ${''}`,
-          pointer: 'OO4_HYVM1__YDH_2017_10_06T06_48_00',
+          pointer: 'sub-NDAREW671HZW__ax_86',
           answer: 0,
           tutorialStep: 2,
         },
